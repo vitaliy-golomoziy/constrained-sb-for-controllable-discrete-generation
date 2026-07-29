@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying paper."
+title: "Entropy-Constrained Schrödinger Bridges for Controllable Discrete Generation"
+type: software
+authors:
+  - family-names: Golomoziy
+    given-names: Vitaliy
+  - family-names: Azarov
+    given-names: Yevhenii
+date-released: 2026-07-29

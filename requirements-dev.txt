@@ -1,0 +1,2 @@
+-r requirements-mnist.txt
+pytest>=8

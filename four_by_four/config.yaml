@@ -1,0 +1,26 @@
+# Section 6: binary 4x4 Blank-to-Block experiment
+grid_rows: 4
+grid_cols: 4
+num_steps: 16
+display_steps: [0, 4, 8, 12, 15, 16]
+
+blank_theta: [0.02, 0.02, 0.02, 0.02,
+              0.02, 0.02, 0.02, 0.02,
+              0.02, 0.02, 0.02, 0.02,
+              0.02, 0.02, 0.02, 0.02]
+
+block_theta: [0.02, 0.02, 0.02, 0.02,
+              0.02, 0.95, 0.95, 0.02,
+              0.02, 0.95, 0.95, 0.02,
+              0.02, 0.02, 0.02, 0.02]
+
+ipf_max_cycles: 500
+ipf_tol: 1.0e-7
+
+# Run 3E ends at 85% of the reachable joint-entropy envelope at t=T-1.
+schedule_cap_fraction: 0.85
+
+# Run 3G applies a finite hinge penalty to the deliberately unreachable
+# 6-nat schedule. It illustrates graceful shortfall, not feasibility.
+hinge_beta: 2.0
+aggressive_cap: 6.0

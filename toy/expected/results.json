@@ -1,0 +1,130 @@
+{
+  "description": "Direct path-space CVXPY versus factorized IPF--Dykstra for active erasure-entropy constraints.",
+  "all_passed": true,
+  "results": [
+    {
+      "case": "binary",
+      "alphabet_size": 2,
+      "num_tokens": 2,
+      "num_steps": 3,
+      "states_per_checkpoint": 4,
+      "path_variables_direct": 256,
+      "potential_entries_factorized": 16,
+      "schedule": [
+        0.0,
+        0.6,
+        0.6,
+        0.0
+      ],
+      "unconstrained_entropy": [
+        0.5004024235392897,
+        0.5004023761434913,
+        0.5004023736127743,
+        0.5004024235407947
+      ],
+      "direct_entropy": [
+        0.500402423704682,
+        0.6000000002472297,
+        0.6000000002307271,
+        0.5004024237047038
+      ],
+      "factorized_entropy": [
+        0.5004024235381879,
+        0.5999998065600731,
+        0.5999998065600995,
+        0.5004024235381881
+      ],
+      "minimum_entropy_lift_over_unconstrained": 0.09959762385650872,
+      "direct_objective": 0.04371800610128362,
+      "factorized_objective": 0.043717801412061184,
+      "absolute_objective_gap": 2.0468922243277454e-07,
+      "path_total_variation": 3.046373535021312e-07,
+      "maximum_marginal_total_variation": 2.1354493168201927e-07,
+      "maximum_entropy_difference": 1.9368715653556023e-07,
+      "maximum_direct_constraint_violation": 0.0,
+      "maximum_factorized_constraint_violation": 1.934399268543885e-07,
+      "maximum_factorized_endpoint_error_tv": 2.3095261814098933e-10,
+      "factorized_cycles": 2,
+      "factorized_converged": true,
+      "factorized_final_residual": 2.512363650453153e-10,
+      "seconds": {
+        "unconstrained_direct": 0.030991874999017455,
+        "constrained_direct": 0.02832683299857308,
+        "factorized": 0.029755458002910018
+      },
+      "checks": {
+        "constraint_is_genuinely_active": true,
+        "factorized_solver_converged": true,
+        "objective_gap_below_5e-4": true,
+        "path_tv_below_2e-3": true,
+        "marginal_tv_below_5e-4": true,
+        "entropy_difference_below_5e-4": true,
+        "constraint_violation_below_2e-5": true,
+        "endpoint_error_below_1e-7": true
+      },
+      "passed": true
+    },
+    {
+      "case": "ternary",
+      "alphabet_size": 3,
+      "num_tokens": 2,
+      "num_steps": 3,
+      "states_per_checkpoint": 9,
+      "path_variables_direct": 6561,
+      "potential_entries_factorized": 36,
+      "schedule": [
+        0.0,
+        0.75,
+        0.75,
+        0.0
+      ],
+      "unconstrained_entropy": [
+        0.6984719108323574,
+        0.6984721996641322,
+        0.698472207609619,
+        0.6984719108242072
+      ],
+      "direct_entropy": [
+        0.698471910266804,
+        0.7500000059658419,
+        0.7500000059570245,
+        0.698471910286551
+      ],
+      "factorized_entropy": [
+        0.6984719170607525,
+        0.7499996817489125,
+        0.7499997817017359,
+        0.6984719089477878
+      ],
+      "minimum_entropy_lift_over_unconstrained": 0.051527792390380966,
+      "direct_objective": 0.004434785335262055,
+      "factorized_objective": 0.004434736013574664,
+      "absolute_objective_gap": 4.9321687391364055e-08,
+      "path_total_variation": 1.6033050249164574e-06,
+      "maximum_marginal_total_variation": 5.755665555343126e-07,
+      "maximum_entropy_difference": 3.242169294148667e-07,
+      "maximum_direct_constraint_violation": 0.0,
+      "maximum_factorized_constraint_violation": 3.1825108748329e-07,
+      "maximum_factorized_endpoint_error_tv": 5.772053734282023e-08,
+      "factorized_cycles": 71,
+      "factorized_converged": true,
+      "factorized_final_residual": 7.161936058097673e-08,
+      "seconds": {
+        "unconstrained_direct": 1.0666981249996752,
+        "constrained_direct": 1.1664005830025417,
+        "factorized": 2.1657527920033317
+      },
+      "checks": {
+        "constraint_is_genuinely_active": true,
+        "factorized_solver_converged": true,
+        "objective_gap_below_5e-4": true,
+        "path_tv_below_2e-3": true,
+        "marginal_tv_below_5e-4": true,
+        "entropy_difference_below_5e-4": true,
+        "constraint_violation_below_2e-5": true,
+        "endpoint_error_below_1e-7": true
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Recorded Section 7 results. Values are the predictive-entropy proxy of equation (17), not exact erasure entropies of Schrodinger bridge marginals.",
+  "num_steps": 8,
+  "num_samples": 16,
+  "gibbs_sweeps_per_timestep": 20,
+  "calibration_sweeps": 5,
+  "bisection_iterations": 8,
+  "profiles": {
+    "single_clean_mtm": [1.65, 0.78, 0.70, 0.67, 0.65, 0.60, 0.59, 0.58, 0.53],
+    "natural": [1.65, 2.75, 2.68, 2.58, 2.40, 2.06, 1.78, 1.32, 0.71],
+    "fast": [1.65, 2.66, 2.51, 2.35, 2.02, 1.59, 1.20, 0.88, 0.56],
+    "slow": [1.65, 2.75, 2.68, 2.55, 2.53, 2.35, 2.21, 1.98, 0.88],
+    "pulsed": [1.65, 2.75, 2.66, 2.56, 2.36, 1.81, 2.19, 1.20, 0.67]
+  },
+  "targets": {
+    "fast": [1.64, 2.00, 1.50, 1.10, 0.90, 0.82, 0.78, 0.75, 0.45],
+    "slow": [1.64, 2.72, 2.65, 2.55, 2.60, 2.55, 2.40, 2.00, 0.74],
+    "pulsed": [1.64, 2.72, 2.65, 2.55, 2.40, 1.58, 2.30, 0.85, 0.45]
+  },
+  "reproducibility_note": "Generation is stochastic and device kernels can differ. A fixed seed is now exposed by the public runner, but newly trained checkpoints and reruns need not reproduce these rounded values exactly."
+}

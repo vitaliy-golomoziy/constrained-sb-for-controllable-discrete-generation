@@ -1,0 +1,35 @@
+# Section 7: MNIST VQ-VAE and masked-token models
+seed: 0
+data_dir: data/
+
+# VQ-VAE: 28x28 -> 7x7 tokens, alphabet size A=16
+hidden_channels: 32
+embedding_dim: 64
+num_embeddings: 16
+commitment_cost: 0.25
+learning_rate: 2.0e-4
+batch_size: 256
+num_epochs: 50
+
+# Bidirectional masked-token transformer (hidden width d_model=64)
+mtm_d_model: 64
+mtm_n_heads: 4
+mtm_n_layers: 2
+mtm_dropout: 0.1
+mtm_mask_prob: 0.15
+mtm_learning_rate: 1.0e-3
+mtm_weight_decay: 1.0e-4
+mtm_batch_size: 512
+mtm_num_epochs: 50
+
+# T+1=9 independently stored models. The clean model at t=8 is trained above;
+# models t=1,...,7 are initialized from it and fine-tuned on corrupted tokens.
+sb_T: 8
+sb_noise_mtm_epochs: 20
+sb_noise_mtm_lr: 5.0e-4
+
+# Generation and temperature-controller settings reported in Section 7.
+ablation_n_samples: 16
+ablation_gibbs_sweeps: 20
+ablation_calibration_sweeps: 5
+ablation_bisection_iterations: 8

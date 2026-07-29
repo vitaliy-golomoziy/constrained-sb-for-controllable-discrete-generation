@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.matplotlib/
+.pytest_cache/
+.venv/
+
+four_by_four/output/
+mnist/data/
+mnist/output/
+mnist/train_tokens.npy
+mnist/test_tokens.npy
+mnist/train_labels.npy
+mnist/test_labels.npy
+toy/output/
