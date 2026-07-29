@@ -3,4 +3,5 @@ cvxpy>=1.4
 matplotlib>=3.8
 numpy>=1.26
 PyYAML>=6.0
+reportlab>=4.0
 scipy>=1.11

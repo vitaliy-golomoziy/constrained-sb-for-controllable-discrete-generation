@@ -79,7 +79,8 @@ The first command downloads MNIST, trains the VQ-VAE, and saves the \(7\times7\)
 token arrays. The second trains the clean-token masked model. The third creates
 the \(T+1=9\) stored models: the clean model at \(t=8\), seven independently
 fine-tuned intermediate models, and the \(t=0\) model whose predictions are
-ignored in favor of the uniform source.
+used only to evaluate the displayed \(t=0\) proxy. Generation itself starts
+directly from the uniform source and does not apply that duplicate model.
 
 Run the five reported generation conditions with:
 
@@ -104,6 +105,17 @@ the exact optimum \(P_t\). Stochastic generation and device-specific kernels
 mean newly trained checkpoints need not reproduce the rounded paper values
 exactly. The recorded outputs and figures are in [`mnist/expected`](mnist/expected).
 
+## 4. Appendix entropy comparison
+
+The deterministic script used for the paper's joint-versus-erasure-entropy
+appendix is:
+
+```bash
+python scripts/generate_entropy_functional_comparison.py
+```
+
+It writes `scripts/output/entropy_functional_comparison.pdf`.
+
 ## Repository map
 
 ```text
@@ -111,9 +123,9 @@ modules/          minimal shared implementation
 toy/              Section 5 exact validation
 four_by_four/     Section 6 runs 3C, 3E, and 3G
 mnist/            Section 7 training and ablations
+scripts/          deterministic appendix-figure generator
 ```
 
-## Before public release
+## License
 
-Choose and add a `LICENSE` file. No license has been selected automatically,
-because that is an author decision.
+This repository is released under the [MIT License](LICENSE).
